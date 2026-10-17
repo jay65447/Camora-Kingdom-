@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مملكة كامورا 🌙 Camora</title>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Tajawal:wght@400;500;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--y:#FFD21F;--y2:#FFB800;--y3:#FFE9A0;--ink:#1c1200;--cream:#FFF1BC;--sh:#8a6500;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;min-height:100vh;font-family:'Tajawal',Tahoma,sans-serif;color:#FFE27A;background:#050400;overflow-x:hidden;position:relative}
+.bg{position:fixed;inset:0;z-index:-2;background:#050400}
+.bg::before{content:"";position:absolute;left:50%;top:100%;width:160vmax;height:160vmax;margin:-80vmax 0 0 -80vmax;background:repeating-conic-gradient(from 0deg,rgba(255,210,0,.1) 0 6deg,transparent 6deg 18deg);animation:spin 80s linear infinite;-webkit-mask-image:radial-gradient(circle,#000 0,transparent 55%);mask-image:radial-gradient(circle,#000 0,transparent 55%)}
+.bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 100% 55% at 50% 105%,rgba(255,196,0,.8),rgba(255,160,0,.3) 50%,transparent 80%);transform-origin:50% 100%;animation:breathe 7s ease-in-out infinite alternate}
+@keyframes flow{50%{background-position:100% 50%}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes breathe{to{opacity:.55;transform:scale(1.08)}}
+#moons{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.moon{position:absolute;bottom:-60px;fill:#FFD21F;filter:drop-shadow(0 0 6px rgba(255,210,0,.8));opacity:.5;animation:rise linear infinite}
+@keyframes rise{0%{transform:translateY(0) rotate(0)}50%{transform:translateY(-60vh) translateX(var(--dx)) rotate(180deg)}100%{transform:translateY(-120vh) rotate(360deg)}}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+.hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 0}
+.orb{position:relative;width:min(58vw,250px);aspect-ratio:1;display:grid;place-items:center;animation:bob 6s ease-in-out infinite,pop 1.4s cubic-bezier(.2,1.4,.4,1) both}
+.orb::before{content:"";position:absolute;inset:-18%;border-radius:50%;background:radial-gradient(circle,rgba(255,200,0,.4),transparent 65%);animation:breathe 4s ease-in-out infinite alternate}
+.orb svg{position:relative;width:100%;fill:#FFD21F;filter:drop-shadow(0 0 26px rgba(255,200,0,.7))}
+.ring{position:absolute;inset:-14%;border:2px dashed rgba(255,210,0,.45);border-radius:50%;animation:spin 22s linear infinite}
+.ring i{position:absolute;top:-7px;left:50%;width:14px;height:14px;background:#FFD21F;border-radius:50%;box-shadow:0 0 14px #FFD21F}
+@keyframes bob{50%{transform:translateY(-14px)}}
+@keyframes pop{from{opacity:0;transform:scale(.3) rotate(-40deg)}}
+h1{font-family:'Reem Kufi',serif;font-weight:700;font-size:clamp(3.4rem,15vw,7rem);line-height:1.1;margin:28px 0 0;letter-spacing:.02em;color:#FFD21F;text-shadow:0 0 30px rgba(255,200,0,.55);animation:fade 1s .5s both}
+.en{font-family:'Reem Kufi',sans-serif;font-size:clamp(1.2rem,5vw,1.8rem);letter-spacing:.5em;margin:4px 0 0;padding-inline-start:.5em;animation:fade 1s .8s both}
+.lead{max-width:520px;font-size:1.15rem;line-height:1.9;margin:22px 0 0;animation:fade 1s 1.1s both}
+.go{display:inline-block;margin-top:28px;padding:13px 34px;border-radius:99px;background:var(--y);color:var(--ink);font-weight:700;text-decoration:none;font-size:1.05rem;transition:transform .25s,box-shadow .25s;animation:fade 1s 1.4s both}
+.go:hover,.go:focus-visible{transform:translateY(-3px) scale(1.04);box-shadow:0 0 28px rgba(255,200,0,.6)}
+@keyframes fade{from{opacity:0;transform:translateY(18px)}}
+h2{font-family:'Reem Kufi',serif;font-size:clamp(2rem,7vw,3rem);text-align:center;margin:0 0 8px;color:#FFD21F}
+.sub{text-align:center;margin:0 0 36px;font-size:1.05rem}
+section{padding:56px 0}
+.ranks{display:flex;flex-direction:column;align-items:center;gap:12px}
+.rank{display:flex;align-items:center;justify-content:center;gap:12px;padding:15px 20px;border-radius:18px;font-family:'Aref Ruqaa','Reem Kufi',serif;font-weight:700;font-size:1.5rem;color:#000;position:relative;background:var(--cream);border:2px solid var(--y);box-shadow:5px 5px 0 var(--sh);transition:transform .25s}
+.rank:hover{transform:translate(-4px,-4px)}
+.rank svg{width:1.1em;fill:currentColor;flex:none}
+.rank:nth-child(1){width:52%;margin-top:40px;background:var(--y);color:#000;font-size:1.85rem;box-shadow:0 0 0 4px #050400,0 0 0 6px var(--y),0 0 40px rgba(255,200,0,.6)}
+.rank:nth-child(2){width:62%;background:var(--y2)}
+.rank .crown{position:absolute;top:-48px;left:50%;width:52px;margin-left:-26px;fill:var(--y);filter:drop-shadow(0 0 12px rgba(255,200,0,.9));animation:bob 4s ease-in-out infinite}
+.rank:nth-child(3){width:72%}.rank:nth-child(4){width:80%}.rank:nth-child(5){width:88%}.rank:nth-child(6){width:94%}.rank:nth-child(7){width:100%}
+.more{margin:6px 0 0;font-size:1.1rem;letter-spacing:.3em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,200px));justify-content:center;gap:22px}
+.card{position:relative;display:block;aspect-ratio:1;border-radius:26px;overflow:hidden;border:3px solid var(--y);box-shadow:0 0 26px rgba(255,200,0,.45);text-decoration:none;color:#fff;transition:transform .35s,box-shadow .35s}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,.25) 55%,rgba(0,0,0,.45))}
+.card span{position:absolute;z-index:2;inset-inline:0;bottom:0;padding:16px;text-align:center;font-family:'Reem Kufi',sans-serif;font-weight:700;font-size:clamp(1.4rem,6vw,1.9rem);letter-spacing:.1em;text-shadow:0 4px 18px #000}
+.card:hover,.card:focus-visible{transform:translateY(-4px);box-shadow:0 0 40px rgba(255,200,0,.75)}
+.card:hover img{transform:scale(1.12) rotate(3deg)}
+.page{display:none;min-height:80vh;text-align:center;padding:56px 0}
+.page .banner{width:min(86vw,360px);aspect-ratio:1;object-fit:cover;border-radius:28px;border:3px solid var(--y);box-shadow:8px 8px 0 var(--sh),0 0 40px rgba(255,200,0,.3);animation:pop 1s both}
+.page p{font-size:1.15rem;line-height:1.9;max-width:480px;margin:0 auto}
+.back{display:inline-block;margin-top:26px;padding:12px 28px;border:2px solid var(--y);border-radius:99px;color:var(--y);font-weight:700;text-decoration:none;background:transparent;transition:background .2s,color .2s}
+.back:hover,.back:focus-visible{background:var(--y);color:var(--ink)}
+body.on-page #home{display:none}
+body.on-page .page.show{display:block}
+footer{text-align:center;padding:26px 16px;border-top:2px solid rgba(255,210,0,.35);font-weight:700;letter-spacing:.04em}
+a:focus-visible{outline:3px solid var(--y);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="bg"></div><div id="moons" aria-hidden="true"></div>
+<main class="wrap">
+ <div id="home">
+  <header class="hero">
+   <div class="orb"><span class="ring"><i></i></span><svg viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg></div>
+   <h1>كامورا</h1><p class="en">CAMORA</p>
+   <p class="lead">مملكة تحت ضوء القمر، يجتمع فيها أهلها تحت راية واحدة. تعرّف على رتب المملكة وانضم إلى أحد الفريقين.</p>
+   <a class="go" href="#ranks" data-scroll>اكتشف المملكة 🌙</a>
+  </header>
+  <section id="ranks">
+   <h2>رتب المملكة</h2><p class="sub">من القمة إلى القاعدة</p>
+   <div class="ranks">
+    <div class="rank"><svg class="crown" viewBox="0 0 24 24"><path d="M3 18h18v2H3zM3 7l4.5 4L12 4l4.5 7L21 7l-2 9H5z"/></svg><svg viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>الإمبراطور</div>
+    <div class="rank">نائب الإمبراطور</div>
+    <div class="rank">اليونكو</div>
+    <div class="rank">نائب اليونكو</div>
+    <div class="rank">القادة</div>
+    <div class="rank">النخبة</div>
+    <div class="rank">الأعضاء</div>
+    <div class="more">· · ·</div>
+   </div>
+  </section>
+  <section>
+   <h2>إقليمات المملكة</h2><p class="sub">اضغط على الصورة لدخول الصفحة</p>
+   <div class="cards">
+    <a class="card" href="#/frost"><img src="images/frost.jpg" alt="Frost"><span>Frost</span></a>
+    <a class="card" href="#/red"><img src="images/red.jpg" alt="Red"><span>Red</span></a>
+   </div>
+  </section>
+ </div>
+ <article class="page" id="frost"><img class="banner" src="images/frost.jpg" alt=""><h2 style="margin-top:28px;font-size:3.4rem;letter-spacing:.1em">Frost</h2><p>صفحة Frost في مملكة كامورا.</p><a class="back" href="#">العودة للمملكة 🌙</a></article>
+ <article class="page" id="red"><img class="banner" src="images/red.jpg" alt=""><h2 style="margin-top:28px;font-size:3.4rem;letter-spacing:.1em">Red</h2><p>صفحة Red في مملكة كامورا.</p><a class="back" href="#">العودة للمملكة 🌙</a></article>
+</main>
+<footer>جميع الحقوق محفوظة © RIMURU</footer>
+<script>
+(function(){
+var P='<svg class="moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5z"/></svg>',box=document.getElementById('moons');
+for(var i=0;i<18;i++){var d=document.createElement('div');d.innerHTML=P;var s=d.firstChild,z=14+Math.random()*30;
+s.style.cssText='left:'+Math.random()*100+'%;width:'+z+'px;height:'+z+'px;animation-duration:'+(16+Math.random()*20)+'s;animation-delay:-'+Math.random()*30+'s;--dx:'+(Math.random()*80-40)+'px;opacity:'+(.35+Math.random()*.45);
+box.appendChild(s)}
+function route(){var h=location.hash.replace('#/',''),pg=document.getElementById(h);
+document.querySelectorAll('.page').forEach(function(p){p.classList.remove('show')});
+if(pg&&pg.classList.contains('page')){pg.classList.add('show');document.body.classList.add('on-page');window.scrollTo(0,0)}
+else document.body.classList.remove('on-page')}
+window.addEventListener('hashchange',route);route();
+document.querySelectorAll('[data-scroll]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();document.getElementById('ranks').scrollIntoView({behavior:'smooth'})})});
+})();
+</script>
+</body>
+</html>
